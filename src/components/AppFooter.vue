@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
-    1111111111111111111111111111111111111111111
+  <div class="footer clearFix">
+  COPYright(C)江西省大余县XXXX有限公司 电话：0797-8738088x<br />
+  技术支持：xxx网络 赣ICP备1XXXXXX7号
   </div>
 </template>
 

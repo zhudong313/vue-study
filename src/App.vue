@@ -1,14 +1,17 @@
 <template>
   <div class="app" >
-    <nav>
-      <router-link to="/">首页</router-link>
-      <router-link to="/abc">abc</router-link>
-    </nav>
-    <router-view/>
+    <app-header></app-header>
+    <app-main></app-main>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+//import '@/assets/css/css.css';
+import appHeader from '@/components/AppHeader';
+import appMain from '@/components/AppMain';
+import appFooter from '@/components/AppFooter';
+
 export default {
   name: 'App',
   data(){//储存数据
@@ -19,16 +22,14 @@ export default {
   methods: {//储存方法
 
   },
+  components: {//注册组建
+    appHeader,//appHeader: appHeader,
+    appFooter,
+    appMain,
+  },
 }
 </script>
 
-<style>
-.app{
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import './assets/css/css.css';
 </style>
