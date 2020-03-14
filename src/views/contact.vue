@@ -36,7 +36,7 @@ export default {
         },
       }).then(function(res){
         console.log(res);
-        _this.contentData = res.data;
+        _this.contentData = res.data.data;
       }).catch(function(err){
         console.log(err);
       });
