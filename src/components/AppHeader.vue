@@ -2,7 +2,7 @@
   <div>
     <div class="clearFix top">
       <h1 class="logo"><a href="##"><img src="@/assets/img/logo.jpg" width="231" height="84" alt="xx公司" /></a></h1>
-        <div class="web_map"><a href="##">网站地图</a>|<a href="javascript:void(0)">收藏网站</a></div>
+        <div class="web_map"><router-link to="/admin/index">后台管理</router-link></div>
         <ul class="nav">
             <li v-for="(item,index) in navData" :key="index"><router-link :to="item.to">{{ item.name }}</router-link></li>
         </ul>

@@ -8,6 +8,11 @@ import ProductIndex from '@/views/product/index'
 import ProductList from '@/views/product/list'
 import ProductDetail from '@/views/product/detail'
 import Contact from '@/views/contact'
+import Admin from '@/admin/admin'
+import AdminIndex from '@/admin/index/index'
+import AdminNews from '@/admin/news/index'
+import AdminNewsAdd from '@/admin/news/add'
+import AdminNewsEdit from '@/admin/news/edit'
 
 Vue.use(Router)
 
@@ -58,5 +63,33 @@ export default new Router({
       name: 'contact',
       component: Contact
     },
+      
+    {//后台路由
+      path: '/admin',
+      name: 'admin',
+      component: Admin,
+      children: [
+        {//配置一个路由
+          path: 'index',
+          name: 'admin index',
+          component: AdminIndex
+        },
+        {//配置一个路由
+          path: 'news',
+          name: 'admin news',
+          component: AdminNews,
+        },
+        {//配置一个路由
+          path: 'news/add',
+          name: 'admin news add',
+          component: AdminNewsAdd,
+        },
+        {//配置一个路由
+          path: 'news/edit/:id',
+          name: 'admin news edit',
+          component: AdminNewsEdit,
+        },
+      ]
+    }
   ]
 })
